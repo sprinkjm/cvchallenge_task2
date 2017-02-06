@@ -4,22 +4,41 @@ This seed project gives a starting point to begin working on Task 2 of the CAT V
 # Get started
 Make sure to follow the information on the CPS-VO to install the dependency packages (http://cps-vo.org/group/CATVehicleChallenge)
 
+## Install the CAT Vehicle Simulator
+First, make a new workspace and initialize it, then add the catvehicle git repository:
+```
+cd ~
+mkdir -p cvchallenge_task2_ws/src
+cd cvchallenge_task2_ws/src
+git clone https://github.com/sprinkjm/catvehicle.git
+git clone https://github.com/sprinkjm/obstaclestopper.git
+git clone https://github.com/sprinkjm/cvchallenge_task2.git
+```
+
 ## Updates to the Task 1 seed
 Your task1.py from cvchallenge_task1 will not run with the newest version catvehicle simulator, since we changed the name of the robot. The updated task1.py included in this release will work well, however! Simply perform the following after doing a build:
 
 ```
-cd cvchallenge_task2_ws/
+cd ~/cvchallenge_task2_ws/
 catkin_make
 source devel/setup.bash
 roslaunch cvchallenge_task2 catvehicle_custom.launch worldfile:=world1.world
 ```
 And in a new tab:
 ```
-cd cvchallenge_task2_ws
+cd ~/cvchallenge_task2_ws
 source devel/setup.bash
 rosrun rviz rviz
 ```
-Once you have loaded the vehicle and can see its sensor data, you can now run the task1.py to see how a /detections topic is visualized. Note that these detections are from simulated data, but are using the correct type and topic of what we expect you to detect.
+Once you have loaded the vehicle and can see its sensor data, you can now run the task1.py to see how a /detections topic is visualized. 
+
+```
+cd ~/cvchallenge_task2_ws
+source devel/setup.bash
+rosrun cvchallenge_task2 task1.py
+```
+
+Note that these detections are from simulated data, but are using the correct type and topic of what we expect you to detect.
 
 # What do you do next?
 Think about how to take the sensor data you can get from the catvehicle robot, and convert it into a streaming update of the relevant detections you see within 5m of the robot. 
