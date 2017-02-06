@@ -41,7 +41,7 @@ rosrun cvchallenge_task2 task1.py
 Note that these detections are from simulated data, but are using the correct type and topic of what we expect you to detect.
 
 # What do you do next?
-Think about how to take the sensor data you can get from the catvehicle robot, and convert it into a streaming update of the relevant detections you see within 5m of the robot. 
+Think about how to take the sensor data you can get from the catvehicle robot, and convert it into a streaming update of the relevant detections you see within 4m of the robot. 
 
 For example, a valid solution is to take each laser point you receive, and make a detection out of that point. But how much radius does the detection need? If you detect lots of things close to one another, should they each be an individual detection, or is that group of points an actual object? Can a laser sensor's detection be supplemented with the camera data from the vehicle?
 
