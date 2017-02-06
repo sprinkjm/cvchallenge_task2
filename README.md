@@ -10,6 +10,7 @@ First, make a new workspace and initialize it, then add the catvehicle git repos
 cd ~
 mkdir -p cvchallenge_task2_ws/src
 cd cvchallenge_task2_ws/src
+catkin_init_workspace
 git clone https://github.com/sprinkjm/catvehicle.git
 git clone https://github.com/sprinkjm/obstaclestopper.git
 git clone https://github.com/sprinkjm/cvchallenge_task2.git
